@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Fire Questions Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 500px;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    #question {
+      font-size: 1.5rem;
+      margin: 2rem 0;
+      color: #333;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quick Fire Question Generator 🔥</h1>
+    <div id="question">Klick unten für eine Frage!</div>
+    <button onclick="generateQuestion()">Neue Frage</button>
+  </div>
+
+  <script>
+    const questions = [
+      "Berge oder Meer?",
+      "Kaffee oder Tee?",
+      "Frühaufsteher:in oder Nachteule?",
+      "Stadt oder Land?",
+      "Sommer oder Winter?",
+      "Strandurlaub oder Städtetrip?",
+      "Netflix oder YouTube?",
+      "Pizza oder Pasta?",
+      "Marvel oder DC?",
+      "Kochen oder Bestellen?",
+      "Introvertiert oder extrovertiert?",
+      "Superkraft: Gedankenlesen oder Teleportieren?",
+      "Teamwork oder Einzelarbeit?",
+      "E-Book oder echtes Buch?",
+      "Zeitreise: Zukunft oder Vergangenheit?",
+      "Anrufen oder Schreiben?",
+      "Ordnung oder kreatives Chaos?",
+      "Lachen bis der Bauch weh tut oder stundenlang diskutieren?"
+    ];
+
+    function generateQuestion() {
+      const randomIndex = Math.floor(Math.random() * questions.length);
+      document.getElementById("question").textContent = questions[randomIndex];
+    }
+  </script>
+</body>
+</html>
